@@ -2,8 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-cadastro',
+  standalone: true,
   templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.css']
+  styleUrls: ['./cadastro.component.css'],
+  imports: [CadastroComponent]
 })
 export class CadastroComponent {
   nome: string = '';
