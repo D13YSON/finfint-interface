@@ -1,1 +1,54 @@
-<p>cadastro works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+
+<body>
+    <div class="container">
+         <div class="d-flex justify-content-center">
+            <a class="d-inline-flex link-body-emphasis text-decoration-none">
+                <img class="hg-img img" src="../imagem/favicon.svg" alt="">
+            </a>
+        </div>
+        <h2 class="pb-1 text-center tc-pink font-weight-bold">FinFIT</h2>
+        <div class="container-custom">
+            <div class="col-md-6">
+                <h2 class="mb-4 tc-pink font-weight-bold">Cadastro</h2>
+                <form id="cadastroForm" method="POST" novalidate>
+                    <div class="form-group tc-pink font-weight-bold required">
+                        <label for="nome" class="control-label">Nome</label>
+                        <input type="text" class="form-control size-input" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group tc-pink font-weight-bold required">
+                        <label for="senha" class="control-label">Senha</label>
+                        <input type="password" class="form-control size-input" id="senha" name="senha" required>
+                    </div>
+                    <div class="form-group tc-pink font-weight-bold required">
+                        <label for="gmail">Gmail</label>
+                        <input type="email" class="form-control size-input" id="gmail" name="gmail" required>
+                    </div>
+                    <div class="form-group tc-pink font-weight-bold required">
+                        <label for="celular">Celular</label>
+                        <input type="tel" class="form-control size-input" id="celular" name="celular" required>
+                        <small id="celularHelp" class="form-text text-muted">Formato: (XX) 9 XXXX-XXXX.</small>
+                    </div>
+                    <div class="form-group form-check tc-pink required">
+                        <input type="checkbox" class="form-check-input" id="termo" name="termo" required>
+                        <label class="form-check-label size-input" for="termo">Concordo com os termos de serviço</label>
+                    </div>
+                    <button type="submit" class="btn btn-pink btn-lg px-4 me-md-2 font-weight-bold" id="btnCadastrar">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="cadastro.js"></script>
+</body>
+
+</html>
