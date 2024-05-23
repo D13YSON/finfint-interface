@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from '../header/header.component';
+
 
 @Component({
   selector: 'app-cadastro',
   standalone: true,
   templateUrl: './cadastro.component.html',
   styleUrls: ['./cadastro.component.css'],
-  imports: [CommonModule, CadastroComponent]
+  imports: [CommonModule, HeaderComponent]
 })
 export class CadastroComponent {
   nome: string = '';

@@ -4,7 +4,8 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background: white;
-    width: 75%;
+    width: 90%;
+    height: 80%;
     margin: auto;
 }
 
@@ -25,8 +26,8 @@
 }
 
 body, html {
-    background: linear-gradient(to bottom right, #f7d3d9, #ffffff);
-    height: 100%;
+    background: white;
+    height: 120%;
 } 
 
 .size-input {

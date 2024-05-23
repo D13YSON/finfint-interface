@@ -64,3 +64,45 @@ li a {
     width: 40px;
 
 }
+
+#sobre-nos {
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Estilos para telas menores que a de um notebook */
+
+    /* Ajuste o container principal para largura total em telas menores */
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /* Ajuste o tamanho das colunas dos cards da home em telas menores */
+    #custom-cards .col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* Ajuste a largura da imagem e o alinhamento da seção Sobre nós em telas menores */
+    #sobre-nos {
+        width: 100%;
+    }
+
+    /* Ajuste o tamanho da coluna do texto da seção Sobre nós em telas menores */
+    #sobre-nos + .col-lg-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* Ajuste o espaçamento da seção Recursos em telas menores */
+    .px-4.py-4.text-center {
+        padding: 1rem 1rem;
+    }
+
+    
+
+}

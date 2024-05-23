@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { HeaderComponent } from '../header/header.component';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { CadastroComponent } from '../cadastro/cadastro.component';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, CadastroComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  imports: [CommonModule, CadastroComponent],
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.css'
 })
-export class HomeComponent {
+export class HeaderComponent {
   
   constructor(private router: Router) { }
 
