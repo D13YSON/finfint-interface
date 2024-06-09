@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Connection } from '../../services/connection.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../header/header.component';
@@ -20,34 +19,12 @@ export class SignUpComponent {
   data_nascimento: Date|null = null;
   termo: boolean = false;
 
-  constructor(private connection: Connection, private router: Router) { }
-
-  // Método para enviar os dados do usuário para o backend
-  postUser(): void {
-    const userData = {
-      nome: this.nome,
-      email: this.email,
-      senha: this.senha,
-      termo: this.termo,
-      data_nascimento: this.data_nascimento
-    };
-
-    this.connection.postUser(userData).subscribe(
-      response => {
-        console.log('Usuário registrado com sucesso:', response);
-        // Lógica adicional, como redirecionar para outra página ou exibir uma mensagem de sucesso
-      },
-      error => {
-        console.error('Erro ao registrar usuário:', error);
-        // Lógica adicional, como exibir uma mensagem de erro para o usuário
-      }
-    );
-  }
+  constructor(private router: Router) { }
 
   // Método chamado quando o formulário é enviado
   onSubmit(): void {
     if (this.verifyName() && this.verifyPassword() && this.verifyEmail() && this.verifyServiceTerms()) {
-      this.postUser();
+
     }
   }
 
