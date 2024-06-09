@@ -1,0 +1,38 @@
+<main>
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <a class="d-inline-flex link-body-emphasis text-decoration-none">
+                <img class="hg-img img" src="../imagem/favicon.svg" alt="">
+                <!-- ajustar a imagem aqui -->
+            </a>
+        </div>
+        <div class="container-custom">
+            <div class="col-md-6">
+                <h2 class="mb-4 tc-pink font-weight-bold">SignUp</h2>
+                <form id="signUpForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group tc-pink font-weight-bold required">
+                        <label for="nome" class="control-label">Nome</label>
+                        <input type="text" class="form-control size-input" id="nome" name="nome" [(ngModel)]="nome" required>
+                    </div>
+                    <div class="form-group tc-pink font-weight-bold required">
+                        <label for="senha" class="control-label">Senha</label>
+                        <input type="password" class="form-control size-input" id="senha" name="senha" [(ngModel)]="senha" required>
+                    </div>
+                    <div class="form-group tc-pink font-weight-bold required">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control size-input" id="email" name="email" [(ngModel)]="email" required>
+                    </div>
+                    <div class="form-group tc-pink font-weight-bold required">
+                        <label for="dataNascimento">Data de Nascimento</label>
+                        <input type="date" class="form-control size-input" id="dataNascimento" name="dataNascimento" [(ngModel)]="data_nascimento" required>
+                    </div>
+                    <div class="form-group form-check tc-pink required">
+                        <input type="checkbox" class="form-check-input" id="termo" name="termo" [(ngModel)]="termo" required>
+                        <label class="form-check-label size-input" for="termo">Concordo com os termos de serviço</label>
+                    </div>
+                    <button type="submit" class="btn btn-pink btn-lg px-4 me-md-2 font-weight-bold" id="btnCadastrar">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
