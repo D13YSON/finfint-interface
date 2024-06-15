@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Lista de usuários</h1>
+            <!--Add button -->
+            <button class="btn btn-primary" routerLink="/add">Add User</button>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let usuario of usuarios">
+                    <th scope="row">{{usuario.id}}</th>
+                    <td>{{usuario.nome}}</td>
+                    <td>{{usuario.email}}</td>
+                    <td>
+                      <button class="btn btn-primary" routerLink="/update/{{usuario.id}}">Edit</button>
+                      <button class="btn btn-danger mx-2" (click)="deleteUser(usuario.id)">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
