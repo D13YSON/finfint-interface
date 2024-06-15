@@ -1,0 +1,21 @@
+<div class="carousel" *ngIf="items.length > 0">
+  <button class="nav-button" (click)="previousItem()" [disabled]="isPreviousDisabled()" *ngIf="items.length > 0">
+    &#60;
+  </button>
+  <mat-card class="expense-card" *ngIf="items.length > 0">
+    <mat-card-header>
+      <mat-card-title class="bold-right">{{ currentType() }}</mat-card-title>
+      <mat-card-title>{{ items[currentIndex].titulo_debito }}</mat-card-title>
+      <mat-card-subtitle>{{ items[currentIndex].usuario }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p><strong>Categoria:</strong> {{ items[currentIndex].categoria.titulo_categoria }}</p>
+      <p><strong>Data:</strong> {{ items[currentIndex].data | date:'fullDate' }}</p>
+      <p><strong>Valor:</strong> {{ items[currentIndex].valor | currency:'BRL':'symbol' }}</p>
+      <p><strong>Descrição:</strong> {{ items[currentIndex].descricao }}</p>
+    </mat-card-content>
+  </mat-card>
+  <button class="nav-button" (click)="nextItem()" [disabled]="isNextDisabled()" *ngIf="items.length > 0">
+    &#62;
+  </button>
+</div>

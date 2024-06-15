@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="box">
+    <label>Saldo Atual</label>
+    <div class="value-icon-container">
+      <span class="value">R$: {{ saldoAtual | number:'1.2-2' }}</span>
+      <div class="icon-wrapper saldo">
+        <i class="fas fa-wallet icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="box">
+    <label>Receitas</label>
+    <div class="value-icon-container">
+      <span class="value">R$: {{ receitas | number:'1.2-2' }}</span>
+      <div class="icon-wrapper receitas">
+        <i class="fas fa-arrow-up icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="box">
+    <label>Despesas</label>
+    <div class="value-icon-container">
+      <span class="value">R$: {{ despesas | number:'1.2-2' }}</span>
+      <div class="icon-wrapper despesas">
+        <i class="fas fa-arrow-down icon"></i>
+      </div>
+    </div>
+  </div>
+</div>

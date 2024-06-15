@@ -1,0 +1,31 @@
+<header>
+  <div class="hamburger-menu" (click)="toggleSidebar()">
+    &#9776;
+  </div>
+  <h1>FintFint</h1>
+  <nav>
+    <ul>
+      <li>
+        <a href="#">
+          <span class="profile-icon">
+            <i class="fas fa-user"></i> 
+          </span>
+          Nome do Usuário 
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<div class="sidebar" [class.open]="isOpen">
+  <div class="go-back">
+    <ul>
+      <li><a (click)="closeSidebar()"><i class="fas fa-arrow-left"></i>Fechar</a></li>
+    </ul>
+  </div>
+  <ul>
+    <li><a (click)="openModalExpenses()"><i class="fas fa-wallet"></i> Despesas</a></li>
+    <li><a (click)="openModalRevenues()"><i class="fas fa-money-bill-wave"></i> Receitas</a></li> 
+    <li><a (click)="openModalCategories()"><i class="fas fa-list"></i> Categorias</a></li>
+  </ul>
+</div>

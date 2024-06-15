@@ -1,0 +1,13 @@
+<div class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1>{{ data.title }}</h1>
+      <button (click)="close()" aria-label="Fechar" class="close-button">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="main">
+      <ng-container #dynamicComponentContainer></ng-container>
+    </div>
+  </div>
+</div>

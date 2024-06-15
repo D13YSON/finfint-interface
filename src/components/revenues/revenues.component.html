@@ -1,0 +1,43 @@
+<div class="container">
+  <form [formGroup]="revenuesForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="usuario">Usuário</label>
+      <input type="text" id="usuario" formControlName="usuario" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="categoria">Categoria</label>
+      <div class="categoria-wrapper">
+        <select id="categoria" formControlName="categoria" class="form-control categoria-select">
+          <option *ngFor="let categoria of categorias" [value]="categoria.titulo_categoria">{{
+            categoria.titulo_categoria }}</option>
+        </select>
+        <button mat-mini-fab class="add-button" (click)="openModalCategories()">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="titulo_credito">Título do Crédito</label>
+      <input type="text" id="titulo_credito" formControlName="titulo_credito" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="data_entrada">Data de Entrada</label>
+      <input type="date" id="data_entrada" formControlName="data_entrada" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="valor">Valor</label>
+      <input type="number" id="valor" formControlName="valor" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" formControlName="descricao" class="form-control" maxlength="250"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!revenuesForm.valid">Cadastrar Receita</button>
+  </form>
+</div>
