@@ -1,0 +1,66 @@
+.saldo { background-color: #4CAF50; } 
+.receitas { background-color: #2196F3; }
+.despesas { background-color: #FFC107; } 
+.cartao { background-color: #FF5722; }    
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os boxes se movam para a próxima linha em telas menores */
+  justify-content: space-around; /* Distribui os boxes com espaço ao redor */
+  padding-top: 20px;
+  gap: 20px; /* Espaço entre os boxes */
+}
+
+.box {
+  padding: 16px;
+  border: 1px solid #ccc;
+  text-align: center;
+  background-color: #f4f4f4;
+  border-radius: 15px;
+  width: 100%; /* Deixa os boxes ocuparem toda a largura disponível */
+  max-width: 270px; /* Limita a largura dos boxes */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.box label {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px; 
+}
+
+.icon-wrapper {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; 
+  border: 3px solid #fff; 
+}
+
+.icon {
+  font-size: 24px; 
+  color: #333;
+}
+
+.value {
+  font-size: 20px;
+  color: #333;
+}
+
+.value-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .container {
+    justify-content: center;
+  }
+
+  .box {
+    width: 100%; 
+    max-width: none;
+  }
+}
