@@ -1,1 +1,40 @@
-<p>add-user works!</p>
+<main>
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <a class="d-inline-flex link-body-emphasis text-decoration-none">
+                <img class="hg-img img" src="../imagem/favicon.svg" alt="">
+                <!-- ajustar a imagem aqui -->
+            </a>
+        </div>
+        <div class="container-custom">
+            <div class="col-md-6">
+                <h2 id="title" class="tc-pink font-weight-bold">SignUp</h2>
+                <form id="signUpForm" [formGroup]="form" (ngSubmit)="addUser()">
+                    <div class="form-group tc-pink font-weight-bold required">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input id="nome" formControlName="nome" type="text" class="form-control size-input"  name="nome" required>
+                    </div>
+                    <div class="form-group tc-pink font-weight-bold required">
+                        <label for="data_nascimento" class="form-label">Data de Nascimento</label>
+                        <input id="data_nascimento" formControlName="data_nascimento" type="date" class="form-control size-input"  name="data_nascimento" required>
+                    </div>
+                    <div class="form-group tc-pink font-weight-bold required">
+                        <label for="email" class="form-label">Email</label>
+                        <input id="email" formControlName="email" type="email" class="form-control size-input" name="email" required>
+                    </div>
+                    <div class="form-group tc-pink font-weight-bold required">
+                        <label for="senha" class="form-label">Crie uma senha</label>
+                        <input id="senha" formControlName="senha" type="password" class="form-control size-input" name="senha" required>
+                    </div>
+                    <div id="termo_id" class="form-group tc-pink font-weight-bold required">
+                        <input id="aceite_termo" formControlName="aceite_termo" type="checkbox" class="form-check-label" name="aceite_termo" required>
+                        <label id="termo" for="aceite_termo" class="size-input">Concordo com os termos de serviço</label>    
+                    </div>
+                    <div class="form-group btn-submit size-input">
+                        <button [disabled]="!form.valid" type="submit" class="btn btn-pink btn-lg px-4 me-md-2 font-weight-bold" value="Submit" id="btnCadastrar">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,6 +1,6 @@
 export default interface User{
     id: number;
-    name: string;
+    nome: string;
     data_nascimento: Date;
     email: string;
     senha: string;
