@@ -11,6 +11,7 @@ import { ModalComponent } from '../modal/modal.component';
 import { CategoriesComponent } from '../categories/categories.component';
 import { MatDialog } from '@angular/material/dialog';
 
+
 @Component({
   selector: 'app-revenues',
   standalone: true,

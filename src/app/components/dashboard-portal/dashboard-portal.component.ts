@@ -3,21 +3,16 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-dashboard-portal',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  templateUrl: './dashboard-portal.component.html',
+  styleUrl: './dashboard-portal.component.css'
 })
-export class HeaderComponent {
+export class DashboardPortalComponent {
   constructor(private router: Router) { }
 
   navigateToSignUp(): void {
     this.router.navigate(['/sign-up']);
   }
-
-  navigateToLogin(): void {
-    this.router.navigate(['/login']);
-  }
 }
-

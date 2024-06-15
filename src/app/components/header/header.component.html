@@ -1,5 +1,5 @@
 <header>
-    <div class="d-flex align-items-center justify-content-between py-4 mb-4">
+    <div class="d-flex align-items-center justify-content-between py-2 mb-2">
         <div class="col-md-2 mb-2 mb-md-0">
             <a href="/" class="d-inline-flex align-items-center link-body-emphasis text-decoration-none">
                 <img class="ml-4" src="assets/imagens/logo.svg" alt="Logo">
@@ -13,8 +13,8 @@
                 <li><a href="../contato/contato.html" class="nav-link px-2 tc-pink">Contato</a></li>
             </ul>
         </div>
-        <div class="col-md-2">
-            <button type="button" class="btn btn-pink-out mr-4">Log in</button>
+        <div class="col-md-2 btn-acess">
+            <button type="button" class="btn btn-pink-out mr-4" (click)="navigateToLogin()">Log in</button>
             <button type="button" class="btn btn-pink" (click)="navigateToSignUp()">Sign up</button>
         </div>
     </div>

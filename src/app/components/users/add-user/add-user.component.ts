@@ -32,8 +32,7 @@ export class AddUserComponent {
       this.data = this.form.value;
       this.service.addUser(this.data).subscribe(data => {
         console.log(this.data)
-        // redirect to home page
-        this.router.navigate(['/']);
+        this.router.navigate(['/login']);
       });
     }
 }
