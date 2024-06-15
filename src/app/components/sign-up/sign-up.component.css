@@ -1,0 +1,35 @@
+.container-custom {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    width: 90%;
+    height: 80%;
+    margin: auto;
+}
+
+.img {
+    width: 70px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.tc-pink {
+    color: var(--pink)
+}
+
+.btn-pink {
+    border-color: var(--pink);
+    background-color: var(--pink);
+    color: white;
+}
+
+body, html {
+    background: white;
+    height: 120%;
+} 
+
+.size-input {
+    width: 200%;
+}
