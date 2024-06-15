@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { UsersService } from '../../../users.service';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
+import { UsersService } from '../../../service/users/users.service';
 
 @Component({
   selector: 'app-view-users',

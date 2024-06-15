@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { UsersService } from '../../../users.service';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { UsersService } from '../../../service/users/users.service';
 
 @Component({
   selector: 'app-add-user',
